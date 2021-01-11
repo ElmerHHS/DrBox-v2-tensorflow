@@ -4,7 +4,7 @@ from ctypes import *
 import math
 
 so = ctypes.cdll.LoadLibrary
-librbox = so("./librbox.so")
+librbox = so("/content/DRBoxv2/librbox.so")
 overlap = librbox.Overlap
 overlap.argtypes = (POINTER(c_double),POINTER(c_double))
 overlap.restype = c_double

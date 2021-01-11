@@ -19,13 +19,13 @@ from ctypes import *
 IM_WIDTH  = 300  
 IM_HEIGHT = 300  #consistent with the settings in the main program
 so = ctypes.cdll.LoadLibrary
-librbox = so("./librbox.so")
+librbox = so("/content/DRBoxv2/librbox.so")
 overlap = librbox.Overlap
 OVERLAP_THRESHOLD= 0.3
 overlap.argtypes = (POINTER(c_double),POINTER(c_double))
 overlap.restype  =  c_double
-route_test = "./data/test" 
-route_result = "./data/result" 
+route_test = "/content/DRBoxv2/data/test"
+route_result = "/content/DRBoxv2/data/result"
 retain_threshold = 0  #Only the detection results with the confidence over this threshold are calculated.
 
 def cal_true_number(route = ''):

@@ -10,11 +10,11 @@ from rbox_functions import *
 import scipy.misc
 import pickle
 
-TXT_DIR = './data' 
+TXT_DIR = '/content/DRBoxv2/data'
 INPUT_DATA_PATH = TXT_DIR + '/train'
 TEST_DATA_PATH = TXT_DIR + '/test'
-PRETRAINED_NET_PATH = "./vgg16.npy"
-SAVE_PATH = './result' 
+PRETRAINED_NET_PATH = "/content/DRBoxv2/vgg16.npy"
+SAVE_PATH = '/content/DRBoxv2/result'
 TRAIN_BATCH_SIZE = 8
 IM_HEIGHT = 300
 IM_WIDTH = 300
