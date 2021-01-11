@@ -97,7 +97,7 @@ class DrBoxNet():
         self.loss = self.loc_loss + self.conf_loss #+ self.reg_loss
         self.saver = tf.train.Saver(max_to_keep=5)
         gpu_options = tf.GPUOptions(allow_growth=True)
-        self.sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
+        self.sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options, allow_soft_placement=True))
             
     def compute_conf_loss(self):
         pos_tensor = tf.gather(self.conf, self.batch_pos_idx)
