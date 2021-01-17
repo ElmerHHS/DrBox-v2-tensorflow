@@ -334,6 +334,10 @@ class DrBoxNet():
                 		files.write('\n')
                 print("counter:[%2d], loss:%.8f, loc_loss:%.8f, conf_loss:%.8f, conf_pos_loss:%.8f, conf_neg_loss:%.8f, reg_loss:%.8f") % (counter, loss, loc_loss,
                             conf_loss, conf_pos_loss, conf_neg_loss, reg_loss)
+                if loss < 0.01:
+                    print("Loss below 0.01 threshold, saving model and exiting training...")
+                    self.save(counter)
+                    return
 
             if counter % SAVE_MODEL_INTERVAL == 0:
                 self.save(counter)
@@ -367,7 +371,7 @@ class DrBoxNet():
                 for chid in range(IM_CDIM):
                     temp[:,:,chid] = test_im
                 test_im = temp
-                
+
             [height, width, _] = test_im.shape
             print('Start detection'+test_im_path)
             count = 0
