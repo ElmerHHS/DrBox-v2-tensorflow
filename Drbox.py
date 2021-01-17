@@ -78,7 +78,7 @@ class DrBoxNet():
         self.prior_num = [len(PRIOR_ANGLES)*len(PRIOR_WIDTHS[0]), len(PRIOR_ANGLES)*len(PRIOR_WIDTHS[1])]
         self.total_prior_num = FEA_HEIGHT4*FEA_WIDTH4*self.prior_num[1]+FEA_HEIGHT3*FEA_WIDTH3*self.prior_num[0]*USE_THIRD_LAYER        
         self.para_num = 5
-        self.cls_num = 2  # Number of different classes
+        self.cls_num = 1  # Number of different classes
         self.batch_pos_box = tf.placeholder(tf.float32, shape=[None, self.para_num])
         self.batch_pos_idx = tf.placeholder(tf.int32, shape=[None])
         self.batch_pos_ind = tf.placeholder(tf.float32, shape=[None])
