@@ -1,0 +1,112 @@
+<annotation verified="no">
+  <folder>afbeelding brood</folder>
+  <filename>Broodjes (46)</filename>
+  <path>C:\Users\Jaime\Downloads\dataset 300x300\afbeelding brood\Broodjes (46).jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>300</width>
+    <height>300</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <type>robndbox</type>
+    <name>broodjes onderkant</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <robndbox>
+      <cx>170.133</cx>
+      <cy>130.1707</cy>
+      <w>68.5813</w>
+      <h>32.3941</h>
+      <angle>1.941593</angle>
+    </robndbox>
+  </object>
+  <object>
+    <type>robndbox</type>
+    <name>broodjes bovenkant</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <robndbox>
+      <cx>198.133</cx>
+      <cy>142.1707</cy>
+      <w>68.5813</w>
+      <h>32.3941</h>
+      <angle>1.941593</angle>
+    </robndbox>
+  </object>
+  <object>
+    <type>robndbox</type>
+    <name>broodjes bovenkant</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <robndbox>
+      <cx>137.133</cx>
+      <cy>128.1707</cy>
+      <w>65.2678</w>
+      <h>35.3975</h>
+      <angle>1.941593</angle>
+    </robndbox>
+  </object>
+  <object>
+    <type>robndbox</type>
+    <name>broodjes bovenkant</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <robndbox>
+      <cx>198.5848</cx>
+      <cy>204.7632</cy>
+      <w>67.6172</w>
+      <h>33.1365</h>
+      <angle>1.751593</angle>
+    </robndbox>
+  </object>
+  <object>
+    <type>robndbox</type>
+    <name>broodjes bovenkant</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <robndbox>
+      <cx>166.3015</cx>
+      <cy>193.8639</cy>
+      <w>59.5668</w>
+      <h>35.9293</h>
+      <angle>1.651593</angle>
+    </robndbox>
+  </object>
+  <object>
+    <type>robndbox</type>
+    <name>broodjes bovenkant</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <robndbox>
+      <cx>128.8941</cx>
+      <cy>188.9302</cy>
+      <w>64.3896</w>
+      <h>34.6093</h>
+      <angle>1.901593</angle>
+    </robndbox>
+  </object>
+  <object>
+    <type>robndbox</type>
+    <name>broodjes bovenkant</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <robndbox>
+      <cx>148.31</cx>
+      <cy>240.7648</cy>
+      <w>82.3734</w>
+      <h>28.5551</h>
+      <angle>0.201593</angle>
+    </robndbox>
+  </object>
+</annotation>

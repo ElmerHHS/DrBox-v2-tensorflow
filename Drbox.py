@@ -28,8 +28,10 @@ STEPSIZE3 = 4
 
 
 PRIOR_ANGLES = [0, 30, 60, 90, 120, 150]
-PRIOR_HEIGHTS =[[4.0, 7.0, 10.0, 13.0],[3.0,8.0,12.0,17.0,23.0]] #[3.0,8.0,12.0,17.0,23.0] #
-PRIOR_WIDTHS = [[15.0, 25.0, 35.0, 45.0],[20.0,35.0,50.0,80.0,100.0]]#[20.0,35.0,50.0,80.0,100.0]  
+# PRIOR_HEIGHTS = [[4.0, 7.0, 10.0, 13.0], [3.0, 8.0, 12.0, 17.0, 23.0]]
+PRIOR_HEIGHTS = [[10.0, 18.0, 25.0, 34.0], [20.0, 28.0, 35.0, 42.0, 50.0]]  # Broodjes
+# PRIOR_WIDTHS = [[15.0, 25.0, 35.0, 45.0], [20.0, 35.0, 50.0, 80.0, 100.0]]
+PRIOR_WIDTHS = [[80.0, 85.0, 90.0, 95.0], [100.0, 110.0, 120.0, 130.0, 140.0]]  # Broodjes
 
 
 ITERATION_NUM = 50000 
@@ -76,7 +78,7 @@ class DrBoxNet():
         self.prior_num = [len(PRIOR_ANGLES)*len(PRIOR_WIDTHS[0]), len(PRIOR_ANGLES)*len(PRIOR_WIDTHS[1])]
         self.total_prior_num = FEA_HEIGHT4*FEA_WIDTH4*self.prior_num[1]+FEA_HEIGHT3*FEA_WIDTH3*self.prior_num[0]*USE_THIRD_LAYER        
         self.para_num = 5
-        self.cls_num = 1
+        self.cls_num = 2  # Number of different classes
         self.batch_pos_box = tf.placeholder(tf.float32, shape=[None, self.para_num])
         self.batch_pos_idx = tf.placeholder(tf.int32, shape=[None])
         self.batch_pos_ind = tf.placeholder(tf.float32, shape=[None])
