@@ -16,6 +16,7 @@ TEST_DATA_PATH = TXT_DIR + '/test'
 PRETRAINED_NET_PATH = "/content/DRBoxv2/vgg16.npy"
 SAVE_PATH = '/content/DRBoxv2/result'
 TRAIN_BATCH_SIZE = 8
+TEST_IMAGES_SINGLE_CHANNEL = False
 IM_HEIGHT = 300
 IM_WIDTH = 300
 IM_CDIM = 3
@@ -359,11 +360,14 @@ class DrBoxNet():
                 is_zero    = np.where(test_im == 0)
                 mean_value = np.sum(test_im[not_zero])/len(not_zero[0])
                 for temp_idx in range(len(is_zero[0])):
-                    test_im[is_zero[0][temp_idx], is_zero[1][temp_idx]] = mean_value   
-            temp = np.zeros((test_im.shape[0], test_im.shape[1], IM_CDIM))
-            for chid in range(IM_CDIM):
-                temp[:,:,chid] = test_im
-            test_im = temp
+                    test_im[is_zero[0][temp_idx], is_zero[1][temp_idx]] = mean_value
+
+            if TEST_IMAGES_SINGLE_CHANNEL:
+                temp = np.zeros((test_im.shape[0], test_im.shape[1], IM_CDIM))
+                for chid in range(IM_CDIM):
+                    temp[:,:,chid] = test_im
+                test_im = temp
+                
             [height, width, _] = test_im.shape
             print('Start detection'+test_im_path)
             count = 0
