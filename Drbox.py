@@ -41,7 +41,7 @@ LOC_WEIGHTS = [0.1, 0.1, 0.2, 0.2, 0.1]
 LOAD_PREVIOUS_POS = False
 WEIGHT_DECAY = 0.0005
 DISPLAY_INTERVAL = 100  # 100
-SAVE_MODEL_INTERVAL = 1000
+SAVE_MODEL_INTERVAL = 2000
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"  # select the used GPU
 TEST_BATCH_SIZE = 1
 TEST_RESOLUTION_IN = 3
@@ -100,7 +100,7 @@ class DrBoxNet():
         self.compute_loc_loss()
         self.reg_loss = tf.add_n(self.detector.regular_loss(WEIGHT_DECAY))
         self.loss = self.loc_loss + self.conf_loss + self.reg_loss
-        self.saver = tf.train.Saver(max_to_keep=0)
+        self.saver = tf.train.Saver(max_to_keep=20)
         gpu_options = tf.GPUOptions(allow_growth=True)
         self.sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options, allow_soft_placement=True))
 
