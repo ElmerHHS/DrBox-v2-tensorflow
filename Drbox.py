@@ -41,7 +41,7 @@ LOC_WEIGHTS = [0.1, 0.1, 0.2, 0.2, 0.1]
 LOAD_PREVIOUS_POS = False
 WEIGHT_DECAY = 0.0005
 DISPLAY_INTERVAL = 100  # 100
-SAVE_MODEL_INTERVAL = 2000
+SAVE_MODEL_INTERVAL = 1000
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"  # select the used GPU
 TEST_BATCH_SIZE = 1
 TEST_RESOLUTION_IN = 3
@@ -351,10 +351,8 @@ class DrBoxNet():
                 counter, loss, loc_loss,
                 conf_loss, conf_pos_loss, conf_neg_loss, reg_loss)
                 if loss < 0.01:
-                    print("Loss below 0.01 threshold, saving model and exiting training...")
+                    print("Loss below 0.01 threshold, saving model...")
                     self.save(counter)
-                    return
-
             if counter % SAVE_MODEL_INTERVAL == 0:
                 self.save(counter)
 
